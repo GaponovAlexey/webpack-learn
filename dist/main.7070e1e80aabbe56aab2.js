@@ -26,7 +26,7 @@ eval("console.log('NET');\n\n//# sourceURL=webpack://webpack-learn/./src/Post.js
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./src/Post.js\");\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Post__WEBPACK_IMPORTED_MODULE_0__);\n\r\nfunction component() {\r\n  const element = document.createElement('div');\r\n\r\n  // Lodash, currently included via a script, is required for this line to work\r\n  element.innerHTML = _.join(['Hello', 'webpack'], ' ');\r\n\r\n  return element;\r\n}\r\n\r\ndocument.body.appendChild(component());\r\n\n\n//# sourceURL=webpack://webpack-learn/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./src/Post.js\");\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Post__WEBPACK_IMPORTED_MODULE_0__);\n\r\nconsole.log('terminator');\r\n\n\n//# sourceURL=webpack://webpack-learn/./src/index.js?");
 
 /***/ })
 

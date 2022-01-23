@@ -7,8 +7,10 @@ module.exports = {
     main: './src/index.js', // чанки
   },
   output: {
-    filename: '[name].bundle.js', // что взять
+    filename: '[name].[contenthash].js', // что взять, 2 патерка
     path: path.resolve(__dirname, 'dist'), // куда положить
   },
-  plugins: [new htmlWebpackPlugin()],
+  plugins: [new htmlWebpackPlugin({
+    title: 'webpack-learn'
+  })],
 }
