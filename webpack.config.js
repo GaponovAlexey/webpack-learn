@@ -12,6 +12,7 @@ module.exports = {
     filename: '[name].[contenthash].js', // что взять, 2 патерка
     path: path.resolve(__dirname, 'dist'), // куда положить
   },
+  
   plugins: [
     new CleanWebpackPlugin(),
     new htmlWebpackPlugin({
@@ -29,6 +30,12 @@ module.exports = {
         use: ['file-loader'] // для работы jpg
         
       },
+      {
+        test: /\.(ttf|woff|woff2|eot)$/,// для работы шрифтов
+        use: ['file-loader'] // для работы шрифтов
+        
+      },
+      
     ]
   },
   
