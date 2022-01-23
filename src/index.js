@@ -4,3 +4,4 @@ import json from './assets/json'
 
 console.log('terminator');
 console.log(json);
+
