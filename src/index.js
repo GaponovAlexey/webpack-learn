@@ -1,3 +1,4 @@
+import post from './Post'
 function component() {
   const element = document.createElement('div');
 
