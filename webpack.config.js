@@ -17,4 +17,12 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(jpg)$/i,
+        type:'asset/resource'
+      }
+    ]
+  }
 }
