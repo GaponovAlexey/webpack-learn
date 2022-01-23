@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  mode: 'development',// убирает минификацию
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
