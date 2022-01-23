@@ -1,18 +1,10 @@
-console.log('Post to string')
+function component() {
+  const element = document.createElement('div');
 
-function createAnalitics() {
-  let counter = 0
-  let isDestroy = false
-  const listener = () => counter++
-  document.addEventListener('click', listener)
-  return {
-    destroy() {
-      document.removeEventListener('click', listener)
-      isDestroy = true
-    },
-    getClicks() {
-      isDestroy ?  'destroy ' :  counter
-    },
-  }
+  // Lodash, currently included via a script, is required for this line to work
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+  return element;
 }
-window.analytics = createAnalitics()
+
+document.body.appendChild(component());
