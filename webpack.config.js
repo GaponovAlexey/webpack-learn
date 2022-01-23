@@ -3,9 +3,10 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
+  context: path.resolve(__dirname, 'src'),
   mode: 'development', // убирает минификацию
   entry: {
-    main: './src/index.js', // чанки
+    main: './index.js', // чанки
   },
   output: {
     filename: '[name].[contenthash].js', // что взять, 2 патерка
@@ -14,15 +15,20 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new htmlWebpackPlugin({
-      template: './src/index.html',
+      template: './index.html',
     }),
   ],
   module: {
     rules: [
       {
+        test: /\.(css)$/i, // для работы сss
+        use: ['style-loader', 'css-loader'] // для работы сss
+      },
+      {
         test: /\.(jpg)$/i,
         type:'asset/resource'
       }
     ]
-  }
+  },
+  
 }
