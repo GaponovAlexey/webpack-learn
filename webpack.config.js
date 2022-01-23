@@ -25,9 +25,18 @@ module.exports = {
         use: ['style-loader', 'css-loader'] // для работы сss
       },
       {
-        test: /\.(jpg)$/i,
-        type:'asset/resource'
-      }
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './src/images/1.jpg',
+            },
+          },
+          
+        ],
+        
+      },
     ]
   },
   
